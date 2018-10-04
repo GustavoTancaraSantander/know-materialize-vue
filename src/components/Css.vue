@@ -4,6 +4,8 @@
 
         <button @click = "seleccionado = 'CssColor'">Color</button>
         <button @click = "seleccionado = 'CssGrid'">Grid</button>
+        <button @click = "seleccionado = 'CssMedia'">Media</button>
+        <button @click = "seleccionado = 'CssShadow'">Shadow</button>
 
         <component :is="seleccionado"></component>
         <hr>
@@ -13,10 +15,13 @@
 
 <script>
 import CssColor from './CssColor.vue';
-import CssGrid from './CssGrid.vue';
+import CssGrid  from './CssGrid.vue';
+import CssMedia from './CssMedia.vue';
+import CssShadow from './CssShadow.vue';
+
 
 export default {
-  components: {CssColor, CssGrid},
+  components: {CssColor, CssGrid, CssMedia, CssShadow},
   data() {
     return {
       seleccionado: null //'CssColor', // state vuex next
