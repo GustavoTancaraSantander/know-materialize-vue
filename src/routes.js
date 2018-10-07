@@ -1,9 +1,7 @@
 import Css from './components/Css.vue';
-import CssColor from './components/CssColor.vue';
+import Comp from './components/Comp.vue';
 
 export const routes = [
-  {path: '/css-parent', component: Css,
-  children:[
-      {path: 'css-color', component: CssColor}  // vuex state component: path:':id', 'CssColor' <> 'param'
-  ]},
+  {path: '/css-parent', component: Css},
+  {path: '/components-parent', component: Comp},
 ];

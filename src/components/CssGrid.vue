@@ -2,7 +2,7 @@
     <section >
 
       <h3>Welcome Grid</h3>
-      <a href="https://materializecss.com/color.html" class="red darken-1 btn">Doc Official</a>
+      <a href="https://materializecss.com/grid.html" class="red darken-1 btn">Doc Official</a>
       <hr>
         <div class="blue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem optio sit odit, tenetur minus natus reiciendis quidem repellendus, error voluptas labore commodi tempore aliquam hic corporis nesciunt! Fugit, dolore et?</div>
         <div class="row">
@@ -32,7 +32,7 @@
             <div class="col s7 push-s5 light-green"><span class="flow-text">This div is 7-columns wide on pushed to the right by 5-columns.</span></div>
             <div class="col s5 pull-s7 purple"><span class="flow-text">5-columns wide pulled to the left by 7-columns.</span></div>
         </div>
-        
+
     </section>
 </template>
 
