@@ -1,6 +1,7 @@
 <template>
     <section>
         <h3>Welcome Cards</h3>
+        <a href="https://materializecss.com/cards.html" class="btn red darken-3">Doc Official</a>
         <hr>
         <div class="row">
 

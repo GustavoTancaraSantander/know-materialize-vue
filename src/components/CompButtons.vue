@@ -1,7 +1,7 @@
 <template>
     <section>
         <h3>Welcome Buttons</h3>
-        <a>Doc Official</a>
+        <a href="https://materializecss.com/buttons.html" class="red darken-3 btn">Doc Official</a>
         <hr>
         <section>
             <button class="btn">Boton 1</button>
