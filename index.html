@@ -27,6 +27,23 @@
         M.AutoInit(); // init all components JS-MCss
         console.log("this M",M)
       });
+
+      document.addEventListener('DOMContentLoaded', function() {
+
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems, {
+          direction: 'top',
+          hoverEnabled: false
+          //toolbarEnabled: true
+        });
+
+       /*  let elem = document.querySelectorAll('.carousel');
+        let inst = M.Carousel.init(elem,{
+          indicators:true
+        }); */
+
+
+      });
     </script>
   </body>
 </html>
