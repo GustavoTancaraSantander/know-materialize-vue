@@ -11,6 +11,45 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> -->
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
 
+    <div class=" row navbar-fixed" id="navbar_app">
+      <nav>
+          <a href="#" class="brand-logo right">
+            <!-- <div class="row"> -->
+            <div class="col s2 m2 l2 ">
+              <img class="responsive-img " src="./src/assets/logo.png">
+            </div>
+            <!-- <div class="col s8 m8 l8"><h6 class="flow-text"> {{ msg }} </h6></div> -->
+            <div class="col s2 m2 l2 ">
+              <img class="responsive-img" src="./src/feactures/logoMaterialize.png">
+            </div>
+            <!-- </div> -->
+          </a>
+          <a href="#" class="sidenav-trigger" data-target="menu-responsive">
+                <i class="material-icons">menu</i>
+          </a>
+
+          <div class="col s8 m10 l10">
+            <ul class="hide-on-med-and-down">
+              <li><a href="#">Settings<i class="material-icons left">settings</i></a></li>
+              <li><a href="http://www.freetimelearning.com/materialize-css/">Mcss-External</a></li>
+              <li><a href="#">Tutorial<i class="material-icons left">search</i></a></li>
+              <li><a href="https://materializecss.com/themes.html"><i class="material-icons right">view_module</i>Themes</a></li>
+
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown-inside">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+      </nav>
+      <!-- UL -->
+          <ul id="dropdown-inside" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+          div></ul>
+      <!-- end -->
+
+    </div>
   </head>
   <body>
 
@@ -32,18 +71,19 @@
 
         var elems = document.querySelectorAll('.fixed-action-btn');
         var instances = M.FloatingActionButton.init(elems, {
-          direction: 'top',
+         // direction: 'top',
           hoverEnabled: false
           //toolbarEnabled: true
         });
 
-       /*  let elem = document.querySelectorAll('.carousel');
-        let inst = M.Carousel.init(elem,{
-          indicators:true
-        }); */
-
+       /*  let elm = document.querySelectorAll('.collapsible')
+        let instanc = M.Collapsible.init(elm, {
+          accordion:true,
+          outDuration: 500
+        }) */
 
       });
+
     </script>
   </body>
 </html>
