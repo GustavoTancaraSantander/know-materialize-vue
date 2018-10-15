@@ -146,7 +146,9 @@
   }
   .div-config {
     /* border: 1px solid black; */
-    background-color: lightblue;
+    /* background-color: rgba(23, 146, 80, 0.966); */
+    background-color: rgba(44, 104, 81, 0.157);
+    /* background: image("./feactures/pexels.jpg"); */
     margin-top: 0px;
     padding-top: 0%;
    /*  padding-right: 0px;
