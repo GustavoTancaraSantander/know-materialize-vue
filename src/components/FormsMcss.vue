@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3>Mcss</h3>
+    <h3>Form Mcss</h3>
     <hr>
     <div class="wrapper row">
       <div id="menu-sidenav" class="col s12 m3 l3">
@@ -68,11 +68,13 @@
 
               </ul>
             </ul>
+            <div class="pinned">
             <a href="#" data-target="slide-out-fixed" class="sidenav-trigger hide-on-large-only right"><i class="material-icons">menu</i></a>
+            </div>
         </aside>   <!-- END LEFT SIDEVAR NAV -->
       </div>
 
-      <div id="component-selected " class="col 12 m9 l9 container">
+      <div id="component-selected " class="col s12 m9 l9 container">
         <component :is="seleccionado"></component>
       </div>
 
