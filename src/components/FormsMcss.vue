@@ -3,7 +3,7 @@
     <h3>Form Mcss</h3>
     <hr>
     <div class="wrapper row">
-      <div id="menu-sidenav" class="col s12 m3 l3">
+      <div id="menu-sidenav" class="col s12 m1 l3">
          <aside>    <!-- START LEFT SIDEVAR NAV -->
             <ul id="slide-out-fixed" class="sidenav sidenav-fixed">
               <li>
@@ -73,8 +73,8 @@
             </div>
         </aside>   <!-- END LEFT SIDEVAR NAV -->
       </div>
-
-      <div id="component-selected " class="col s12 m9 l9 container">
+      <!-- one space free need at col ... -->
+      <div id="component-selected " class="col s10 push-s1 m10 l8 container">
         <component :is="seleccionado"></component>
       </div>
 
@@ -83,6 +83,7 @@
 </template>
 
 <script>
+import FMInit from './FMInit.vue';
 import FMCheckbox from './FMCheckbox.vue';
 import FMRadio from './FMRadio.vue';
 import FMRange from './FMRange.vue';
@@ -94,10 +95,10 @@ import FMPickers from './FMPickers.vue';
 import M from 'materialize-css'
   export default {
     name:'sidenav',
-    components:{FMCheckbox, FMRadio, FMRange, FMSelect, FMSwitches, FMTextInput, FMPickers},
+    components:{FMCheckbox, FMRadio, FMRange, FMSelect, FMSwitches, FMTextInput, FMPickers, FMInit},
     data() {
       return {
-        seleccionado:null,
+        seleccionado:'FMInit',
         classObject: {
             collapsible:true,
             //expandable: true,

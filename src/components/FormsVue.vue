@@ -4,7 +4,7 @@
     <hr>
     <div class="row">
 
-      <div id="menu-sidenav-FV" class="col s12 m3 l3">
+      <div id="menu-sidenav-FV" class="col s12 m1 l3">
         <aside>    <!-- START LEFT SIDEVAR NAV -->
           <ul id="slide-out-fixed-FV" class="sidenav sidenav-fixed">
             <li>
@@ -74,7 +74,7 @@
         </aside>   <!-- END LEFT SIDEVAR NAV -->
       </div>
 
-      <div class="col s12 m9 l9 container">
+      <div class="col s11 push-s1 m11 l8 container">
           <component :is="seleccionado"></component>
       </div>
 
