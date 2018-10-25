@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="Navbar" class="scrollspy">
         <h3>Welcome Navbar</h3>
         <a href="https://materializecss.com/navbar.html" class="btn red darken-3">Doc Official</a>
           <hr>
@@ -100,6 +100,14 @@
 </template>
 
 <script>
+  export default {
+    mounted() {
+      var elems = document.querySelectorAll('.scrollspy');
+      var instances = M.ScrollSpy.init(elems,{
+        scrollOffset:85
+      });
+    },
+  }
     /* document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);

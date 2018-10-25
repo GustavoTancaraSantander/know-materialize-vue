@@ -12,86 +12,39 @@
     <div class="row">
       <div class="col s12 m3 l2" id="menu-of-components">
         <div class="pinned">
+
           <a href="#" class="sidenav-trigger hide-on-med-and-up" data-target="menu-mobile">
                 <i class="small material-icons btn-floating">list</i>
           </a>
 
           <!-- class="hide-on-med-and-down" mobile -->
          <ul :class="classObjects" class="hide-on-small-and-down">
-
-            <li>
-              <div class="collapsible-header" @click = "seleccionado = 'JsCarousel'">
-                <i class="material-icons ">whatshot</i>Carousel
+          <!-- NEXT is seleccionado = true => :class = waves-effect waves-teal -->
+             <li v-for="(jsComponent, key) in menuComponents" :key="key">
+              <div class="collapsible-header waves-effect waves-teal" @click = "seleccionado = jsComponent">
+                <i class="material-icons ">{{menuIcons[key]}}</i>{{jsComponent.slice(2)}}
               </div>
-              <div class="collapsible-body"><a href="https://materializecss.com/carousel.html" class="btn red darken-1">Doc Official</a></div>
-            </li>
-
-            <li>
-              <div class="collapsible-header" @click = "seleccionado = 'JsCollapsible'">
-                <i class="material-icons">whatshot</i>Collapsible
+              <div class="collapsible-body">
+                <a :href="convertedLinkM(jsComponent)" class="btn red darken-1"> <!-- {{convertedLink}} -->Doc Official</a>
               </div>
-              <div class="collapsible-body"></div>
             </li>
-
-            <li>
-              <div class="collapsible-header" @click = "seleccionado = 'JsDropDown'">
-                <i class="material-icons">expand_more</i>DropDown
-              </div>
-              <div class="collapsible-body"></div>
-            </li>
-
-            <li>
-              <div class="collapsible-header" @click = "seleccionado = 'JsMediaBox'">
-                <i class="material-icons">filter_drama</i>MediaBox
-              </div>
-              <div class="collapsible-body z-depth-5 green lighten-4"> <a href="https://materializecss.com/media.html" class="btn red darken-1">Doc Official</a></div>
-            </li>
-
-            <li>
-              <div class="collapsible-header" @click = "seleccionado = 'JsSidenav'">
-                <i class="material-icons">filter_drama</i>Sidenav
-              </div>
-              <div class="collapsible-body"><a href="https://materializecss.com/media.html" class="btn red darken-1">Doc Official</a></div>
-            </li>
-
-            <li>
-              <div class="collapsible-header" @click = "seleccionado = 'JsScrollspy'">
-                <i class="material-icons">place</i>Scrollspy
-              </div>
-              <div class="collapsible-body"><a href="https://materializecss.com/media.html" class="btn red darken-1">Doc Official</a></div>
-            </li>
-
-            <li>
-              <!-- NEXT is seleccionado = true => :class = waves-effect waves-teal -->
-              <div class="collapsible-header waves-effect waves-teal" @click = "seleccionado = 'JsParallax'">
-                <i class="material-icons">web</i>Parallax
-              </div>
-              <div class="collapsible-body"><a href="https://materializecss.com/parallax.html" class=" btn red darken-1">Doc Official</a></div>
-            </li>
-
          </ul>
 
         </div>
       </div>
 
       <div class="col s12 m9 l10">
-        <!-- <button @click = "seleccionado = 'JsCarousel'">Carousel</button>
-        <button @click = "seleccionado = 'JsCollapsible'">Collapsible</button>
-        <button @click = "seleccionado = 'JsMediaBox'">MediaBox</button>
-        <button @click = "seleccionado = 'JsSidenav'">Sidenav</button>
-        <button @click = "seleccionado = 'JsScrollspy'">Scrollspy</button> -->
-        <div >
             <component :is="seleccionado"></component>
-        </div>
-        <hr>
+            <hr>
+            <pre class="left-align "> {{ $data }}</pre>
       </div>
     </div>
-      <pre> {{ $data }}</pre>
 
      <!-- UL mobile-responsive hide menu -->
      <ul class="sidenav" id="menu-mobile">
         <!-- add component dinamic -> :is -->
         <li ><a href="#">Settings<i class="material-icons left">settings</i></a></li>
+
         <li>
           <div class="user-view">
             <div class="background">
@@ -101,40 +54,11 @@
             <h3>JScript</h3>
           </div>
         </li>
-        <!-- Elems <li> menu-mobile Parent-JScript (NEXT V-FOR data)-->
-        <li>
-            <a class="collapsible-header waves-effect waves-teal sidenav-close" @click = "seleccionado = 'JsCarousel'">
-              <i class="material-icons">whatshot</i>Carousel
-            </a>
-        </li>
-        <li>
-            <a class="collapsible-header waves-effect waves-teal sidenav-close" @click = "seleccionado = 'JsCollapsible'">
-              <i class="material-icons">whatshot</i>Collapsible
-            </a>
-        </li>
-        <li>
-            <a class="collapsible-header waves-effect waves-teal sidenav-close" @click = "seleccionado = 'JsDropDown'">
-              <i class="material-icons">expand_more</i>DropDown
-            </a>
-        </li>
-        <li>
-            <a class="collapsible-header waves-effect waves-teal sidenav-close" @click = "seleccionado = 'JsMediaBox'">
-              <i class="material-icons">whatshot</i>MediaBox
-            </a>
-        </li>
-        <li>
-            <a class="collapsible-header waves-effect waves-teal sidenav-close" @click = "seleccionado = 'JsSidenav'">
-              <i class="material-icons">whatshot</i>Sidenav
-            </a>
-        </li>
-        <li>
-            <a class="collapsible-header waves-effect sidenav-close" @click = "seleccionado = 'JsScrollspy'">
-              <i class="material-icons">whatshot</i>Scrollspy
-            </a>
-        </li>
-        <li>
-            <a class="collapsible-header waves-effect waves-teal sidenav-close" @click = "seleccionado = 'JsParallax'">
-              <i class="material-icons">whatshot</i>Parallax
+
+        <li v-for="(componentt, key) in menuComponents" :key="key">
+            <a class="collapsible-header waves-effect waves-teal sidenav-close"
+             @click = "seleccionado = componentt">
+              <i class="material-icons">{{menuIcons[key]}}</i>{{componentt.slice(2)}}
             </a>
         </li>
 
@@ -163,19 +87,44 @@ import M from 'materialize-css'
           //expandable: true,
           popout: true,
           active: true,
-        }
+        },
+
+        menuComponents:[
+          'JsCarousel', 'JsCollapsible','JsDropDown', 'JsMediaBox', 'JsSidenav',
+           'JsScrollspy', 'JsParallax'
+        ],
+
+        menuIcons:[
+          'loop', 'system_update_alt', 'expand_more', 'perm_media', 'more_vert',
+          'low_priority', 'dvr'
+        ],
+
       }
     },
-     mounted() {
+
+    computed: {
+      convertedLinkC(){
+        return "https://materializecss.com/"+ this.jsComponent.slice(2).slice(0,1).toLowerCase()+this.jsComponent.slice(2).slice(1) +".html"
+      // JsComponent.slice(2).slice(0,1).toLowerCase()+JsComponent.slice(2).slice(1)
+      }
+    },
+
+    methods:{
+      convertedLinkM(jsComponent){
+        return "https://materializecss.com/"+ jsComponent.slice(2).slice(0,1).toLowerCase()+jsComponent.slice(2).slice(1) +".html"
+      }
+    },
+
+    mounted() {
        //M.AutoInit();
-      let elem = document.querySelector('.collapsible')
-      let inst = new M.Collapsible(elem, {
+      let elem_CollapsibleJS = document.querySelector('.collapsible')
+      let inst_CollapsibleJS = new M.Collapsible(elem_CollapsibleJS, {
           accordion:true,
           outDuration: 10
         });
 
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems,{
+      let elemJS = document.querySelectorAll('.sidenav');
+      let instJS = M.Sidenav.init(elemJS,{
         edge:'left',
         preventScrolling: true
       });

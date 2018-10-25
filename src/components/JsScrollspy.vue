@@ -2,8 +2,8 @@
   <section>
     <h3>Scrollspy</h3>
     <hr>
-    <div class="row">
-      <div class="col s10 ">
+    <div class="row ">
+      <div class="col s9 m9 l9 push-l1">
         <div id="introduction" class="scrollspy">
           <h4>introduction</h4>
           <p>Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint eaque provident officia accusantium labore, esse aspernatur omnis quae voluptates nostrum! Facere veniam dolores labore asperiores harum soluta voluptas magni. </p>
@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="col s2">
+      <div class="col s3 m3 l2 push-l1">
         <div class="pinned">
           <ul class="section table-of-contents">
             <li><a href="#introduction">Introduction</a></li>
@@ -33,8 +33,7 @@
             <li><a href="#init">Intialization</a></li>
           </ul>
         </div>
-
-     </div>
+      </div>
   </div>
 
   </section>
@@ -47,10 +46,17 @@ import M from 'materialize-css'
 
       var elems = document.querySelectorAll('.scrollspy');
       var instances = M.ScrollSpy.init(elems,{
-        scrollOffset:0
+        scrollOffset:85
       });
 
     },
   }
 </script>
+
+<style scope>
+  p {
+  text-align: justify;
+  }
+</style>
+
 

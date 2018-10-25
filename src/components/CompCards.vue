@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="Cards" class="scrollspy">
         <h3>Welcome Cards</h3>
         <a href="https://materializecss.com/cards.html" class="btn red darken-3">Doc Official</a>
         <hr>
@@ -213,6 +213,7 @@
 
 <script>
 export default {
+  
   data() {
     return {
       ventas: [
@@ -225,6 +226,14 @@ export default {
 
     }
   },
+
+  mounted() {
+      var elems = document.querySelectorAll('.scrollspy');
+      var instances = M.ScrollSpy.init(elems,{
+        scrollOffset:85
+      });
+    },
+
 }
 
 </script>

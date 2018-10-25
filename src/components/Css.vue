@@ -1,20 +1,23 @@
 <template>
-  <main>
+  <section>
+    <div>
       <h5> CSS parent</h5>
 
-        <button @click = "seleccionado = 'CssColor'">Color</button>
-        <button @click = "seleccionado = 'CssGrid'">Grid</button>
-        <button @click = "seleccionado = 'CssMedia'">Media</button>
-        <button @click = "seleccionado = 'CssShadow'">Shadow</button>
-        <button @click = "seleccionado = 'CssTypography'">Typography</button>
-        <button @click = "seleccionado = 'CssTransition'">Transition</button>
-        <button @click = "seleccionado = 'CssTable'">Table</button>
-        <button @click = "seleccionado = 'CssHelpers'">Helpers</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssColor'">Color</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssGrid'">Grid</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssMedia'">Media</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssShadow'">Shadow</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssTypography'">Typography</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssTransition'">Transition</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssTable'">Table</button>
+        <button class="waves-effect waves-teal btn " @click = "seleccionado = 'CssHelpers'">Helpers</button>
 
-        <component :is="seleccionado"></component>
+    </div>
+
+        <component :is="seleccionado" class="container"></component>
         <hr>
         <pre> {{ $data }}</pre>
-  </main>
+  </section>
 </template>
 
 <script>
@@ -37,4 +40,26 @@ export default {
   },
 }
 </script>
+
+<style>
+
+.inline-style {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+div, h5 {
+background-position: 0%;
+  margin-top: 0%;
+   padding-top: 0%;
+}
+</style>
+
 

@@ -14,15 +14,15 @@
     <div class=" row navbar-fixed" id="navbar_app">
       <nav>
           <a href="#" class="brand-logo right">
-            <!-- <div class="row"> -->
+
             <div class="col s2 m2 l2 ">
               <img class="responsive-img " src="./src/assets/logo.png">
             </div>
-            <!-- <div class="col s8 m8 l8"><h6 class="flow-text"> {{ msg }} </h6></div> -->
+
             <div class="col s2 m2 l2 ">
               <img class="responsive-img" src="./src/feactures/logoMaterialize.png">
             </div>
-            <!-- </div> -->
+
           </a>
           <a href="#" class="sidenav-trigger" data-target="menu-responsive">
                 <i class="material-icons">menu</i>
@@ -31,22 +31,21 @@
           <div class="col s8 m10 l10">
             <ul class="hide-on-med-and-down">
               <li><a href="#">Settings<i class="material-icons left">settings</i></a></li>
-              <li><a href="http://www.freetimelearning.com/materialize-css/">Mcss-External</a></li>
+              <li><a href="https://vue-chartjs.org/#/home">vue-chartjs<i class="material-icons left">insert_chart</i></a></li>
               <li><a href="#">Tutorial<i class="material-icons left">search</i></a></li>
-              <li><a href="https://materializecss.com/themes.html"><i class="material-icons right">view_module</i>Themes</a></li>
-
-              <!-- Dropdown Trigger -->
-              <li><a class="dropdown-trigger" href="#!" data-target="dropdown-inside">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+               <!-- Dropdown Trigger -->
+              <li><a class="dropdown-trigger" href="#" data-target="dropdown-inside">Mcss-External<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
           </div>
       </nav>
       <!-- UL -->
           <ul id="dropdown-inside" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
+            <li><a href="http://www.freetimelearning.com/materialize-css/">freetimelearning</a></li>
+            <li><a href="https://pixinvent.com/materialize-material-design-admin-template/landing/">pixinvent Admin</a></li>
+            <li><a href="https://pixinvent.com/">pixinvent</a></li>
             <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-          div></ul>
+            <li><a href="https://materializecss.com/themes.html"><i class="material-icons right">view_module</i>Themes</a></li>
+          </ul>
       <!-- end -->
 
     </div>
@@ -76,12 +75,8 @@
           hoverEnabled: false
           //toolbarEnabled: true
         });
-
-       /*  let elm = document.querySelectorAll('.collapsible')
-        let instanc = M.Collapsible.init(elm, {
-          accordion:true,
-          outDuration: 500
-        }) */
+        
+        M.toast({html: 'Welcome APP!'})
 
       });
 

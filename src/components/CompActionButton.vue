@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="ActionButton" class="scrollspy">
         <h3>Welcome Floating Action Button</h3>
         <a href="https://materializecss.com/floating-action-button.html" class="btn red darken-1">Doc Official</a>
         <hr>
@@ -18,12 +18,22 @@
 </template>
 
 <script>
+ export default {
+    mounted() {
+      var elems = document.querySelectorAll('.scrollspy');
+      var instances = M.ScrollSpy.init(elems,{
+        scrollOffset:85
+      });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
-      toolbarEnabled: true
-    });
-  });
+      var elAB= document.querySelector('.action-btn');
+      var instancesAB = new M.FloatingActionButton(elAB, {
+        toolbarEnabled: true,
+        direction: 'left',
+        hoverEnabled: false
+      });
+
+    },
+  }
+
 </script>
 

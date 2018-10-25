@@ -31,8 +31,8 @@ import M from 'materialize-css'
   export default {
     name: 'Collapsible',
     mounted() {
-      let elem = document.querySelector('.collapsible')
-      let inst = new M.Collapsible(elem, {
+      let elem = document.querySelectorAll('.collapsible')
+      let inst = M.Collapsible.init(elem, {
           accordion:true,
           outDuration: 500
         })
@@ -41,7 +41,7 @@ import M from 'materialize-css'
       return {
          classObject: {
             collapsible:true,
-            expandable: true,
+          //  expandable: true,
             popout: true,
             active: true,
          }

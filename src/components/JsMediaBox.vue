@@ -1,6 +1,6 @@
 <template>
     <section>
-      <h3>Welcome Media Box</h3>
+      <h3>Media Box</h3>
         <a href="https://materializecss.com/media.html" class="btn red darken-1">Doc Official</a>
       <hr>
       <div class="row" id="media-materialboxed">
@@ -62,12 +62,12 @@ import M from 'materialize-css'
   export default {
     name: 'materialboxed',
     mounted() {
-      // M.AutoInit();
+
       var el1 = document.querySelector('.materialboxed1')
       var inst = new M.Materialbox(el1)
       var el2 = document.querySelector('.materialboxed2')
       var inst = new M.Materialbox(el2)
-      //var instance = M.Materialbox.getInstance(elem);
+      
       var elems = document.querySelector('.slider');
       var instances = new M.Slider(elems,{
         interval:2000,

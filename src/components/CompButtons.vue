@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="container scrollspy" id="Buttons">
         <h3>Welcome Buttons</h3>
         <a href="https://materializecss.com/buttons.html" class="red darken-3 btn">Doc Official</a>
         <hr>
@@ -46,3 +46,17 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+
+  mounted() {
+    var elems = document.querySelectorAll('.scrollspy');
+    var instances = M.ScrollSpy.init(elems,{
+      scrollOffset:85
+    });
+  },
+
+}
+</script>
+

@@ -8,7 +8,10 @@
       </a>
 
         <ul>
-          <li><a class="tiny btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+          <li><a class="tiny btn-floating red" onclick="M.toast({html: 'Next implementation ChartJS pending'})">
+               <i class="material-icons">insert_chart</i>
+              </a>
+          </li>
 
           <li><a class="sidenav-trigger btn-floating blue" data-target="slide-out">
                  <i class="material-icons">settings</i>
@@ -46,19 +49,7 @@
 
     </div>
 
-    <!-- <div class="row " id="routes-parents_rview"> -->
-      <!-- <div class="col s12 m3 l3"> -->
-         <!--  <section  v-for="(parent,key) in parents" :key="key">
-            <router-link :to="'/'+ routes[key]" class="btn">{{ parent }}</router-link>
-          </section> -->
-
-      <!-- </div> -->
-      <!-- <div class="col s12 m9 l9 "> -->
-
-          <router-view></router-view>
-
-      <!-- </div> -->
-    <!-- </div> -->
+    <router-view></router-view>
 
 <!-- *************************************************************************** -->
 
@@ -68,12 +59,11 @@
     <ul class="sidenav" id="menu-responsive">
         <!-- add component dynamic -> :is -->
         <li><a href="#">Settings<i class="material-icons left">settings</i></a></li>
-        <li><a href="#">Mcss-External</a></li>
-        <li><a href="#">Tutorial</a></li>
-        <li><a href="https://materializecss.com/themes.html">Themes</a></li>
+        <li><a href="https://vue-chartjs.org/#/home">vue-chartjs<i class="material-icons">insert_chart</i></a></li>
+        <li><a href="#">Tutorial<i class="material-icons left">search</i></a></li>
         <li>
             <a class="dropdown-trigger" href="#!" data-target="dropdown1-external">
-              Dropdown<i class="material-icons right">arrow_drop_down</i>
+              Mcss-External<i class="material-icons right">arrow_drop_down</i>
             </a>
         </li>
     </ul>
@@ -81,10 +71,11 @@
 
 <!-- use(navbar_app)->data-target Dropdown Structure -->
     <ul id="dropdown1-external" class="dropdown-content">
-      <li><a href="#!">one</a></li>
-      <li><a href="#!">two</a></li>
+      <li><a href="http://www.freetimelearning.com/materialize-css/">freetimelearning</a></li>
+      <li><a href="https://pixinvent.com/materialize-material-design-admin-template/landing/">pixinvent Admin</a></li>
+      <li><a href="https://pixinvent.com/">pixinvent</a></li>
       <li class="divider"></li>
-      <li><a href="#!">three</a></li>
+      <li><a href="https://materializecss.com/themes.html"><i class="material-icons right">view_module</i>Themes</a></li>
     </ul>
 <!-- end -->
 
@@ -96,24 +87,28 @@
               <img src="./feactures/pexels.jpg">
             </div>
             <a href="#user"><img class="circle" src="./feactures/logoMaterialize.png"></a>
-            <a href="#name"><span class="white-text name">John Doe</span></a>
-            <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            <a href="#name"><span class="white-text name">Gustavo TS</span></a>
+            <a href="#email"><span class="white-text email">developer.ias.0110@gmail.com</span></a>
           </div>
         </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
+
+        <li><a href="/" class="left-align">Home<i class="material-icons">home</i></a></li>
+        <li><a href="#" class="left-align">My Account <i class="material-icons">account_circle</i></a></li>
+        <li><a href="#" class="left-align">Mail<i class="material-icons">mail</i></a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><a class="subheader">Advanced</a></li>
+        <li><a href="#" class="left-align waves-effect">Config<i class="material-icons">build</i></a></li>
+        <li><a class="left-align waves-effect" href="#">Customer Support<i class="material-icons">headset_mic</i></a></li>
+        <li><a class="left-align waves-effect" href="#">suggestions<i class="material-icons">important_devices</i></a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#" class="left-align waves-effect blue-text">About Us<i class="material-icons">info</i></a></li>
+
     </ul>
 <!-- end -->
 <!-- ***************************** end UL App ******************************-->
 
   </div> <!-- end #app -->
-   <!--  <div class="row">
-      <div class="col s3 m3"><router-link to="/css-parent" class="btn">CSS</router-link></div>
-      <div class="col s9 m9"><router-view></router-view></div>
-    </div> -->
+
 </template>
 
 <script>
@@ -140,7 +135,7 @@
   }
 
   h1, h2 ,h3 {
-    font-weight: normal;
+    /* font-weight: normal; */
     margin-top: 0px;
     padding-top: 0%;
   }
